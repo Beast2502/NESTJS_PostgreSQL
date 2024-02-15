@@ -1,13 +1,16 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity()
-export class User {
+export class TenantNest {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  question: string;
+  schema_name : string;
 
-  @Column('jsonb', { nullable: true })
-  options: string[];
+
+  @Column()
+  is_active: Boolean;
+
+
 }
