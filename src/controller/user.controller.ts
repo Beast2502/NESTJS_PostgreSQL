@@ -1,6 +1,6 @@
 import { InjectRepository } from "@nestjs/typeorm";
 import { Repository } from "typeorm";
-import { UserEntity } from "../entities/user.enitiy";
+import { UserEntity } from "../entities/user.entity";
 import { Body, Controller, Get, Param, Post, Req, } from "@nestjs/common";
 import { UserService } from "../services/user.service";
 
@@ -30,6 +30,7 @@ export class UserController {
 
     @Post('')
     async createUser(@Body() { email, password, is_active, full_name, schema_name }) {
+
 
 
         return await this.userService.createUser(email, password, is_active, full_name, schema_name)

@@ -8,14 +8,20 @@ import { AppService } from './app.service';
 
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './models/user.module';
-import { TenantModule } from './models/tenant.module';
+import { DynamicSchemasModule } from './models/dynamic-schemas.module';
+import {CustModule} from './models/cust.module'
+
+
 
 
 
 import { config } from './db/orm.config';
 
 @Module({
-  imports: [AuthModule, UserModule, TenantModule,
+  imports: [AuthModule, 
+    UserModule,
+    DynamicSchemasModule,
+    CustModule,
     TypeOrmModule.forRoot(config),
   ],
 

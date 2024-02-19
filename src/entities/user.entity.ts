@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
-@Entity('users')
+@Entity('user')
 export class UserEntity {
   @PrimaryGeneratedColumn()
   id: number;
@@ -13,6 +13,9 @@ export class UserEntity {
 
   @Column()
   password: string;
+
+  @Column()
+  schema_name :string;
 
   @Column()
   is_active: Boolean;

@@ -9,6 +9,8 @@ export const config: TypeOrmModuleOptions ={
     host : 'localhost',
     database : 'multitenant' ,
     synchronize : true,
-    
+    entities: [__dirname + '/../**/*.entity{.ts,.js}'],
 }
+
+
 
